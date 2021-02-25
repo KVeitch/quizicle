@@ -65,11 +65,14 @@ const App = () => {
           totalQuestions={TOTAL_QUESTION}
         />
       )}
-      {!loading && !gameOver && userAnswers.length === number + 1 && (
-        <button className="next" onClick={nextQuestion}>
-          Next Question
-        </button>
-      )}
+      {!loading &&
+        !gameOver &&
+        userAnswers.length === number + 1 &&
+        number !== TOTAL_QUESTION - 1 && (
+          <button className="next" onClick={nextQuestion}>
+            Next Question
+          </button>
+        )}
     </div>
   );
 };
