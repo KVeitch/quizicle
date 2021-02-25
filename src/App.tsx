@@ -54,7 +54,7 @@ const App = () => {
         </button>
       )}
       {!gameOver && <p className="score">Score:</p>}
-      <p>Loading Questions</p>
+      {loading && <p>Loading Questions. Please be patient.</p>}
       {/* <QuestionCard
         questionNum={number +1}
         question= {questions[number].question}
