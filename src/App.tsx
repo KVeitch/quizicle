@@ -48,9 +48,11 @@ const App = () => {
   return (
     <div className="App">
       <h1>Quizicle?</h1>
-      <button className="start" onClick={startTrivia}>
-        Start
-      </button>
+      {(gameOver || userAnswers.length === TOTAL_QUESTION) && (
+        <button className="start" onClick={startTrivia}>
+          Start
+        </button>
+      )}
       <p className="score">Score:</p>
       <p>Loading Questions</p>
       {/* <QuestionCard
